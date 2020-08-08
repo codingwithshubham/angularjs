@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>angularjs</title>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
     </head>
 
-    <body>
-        <h1>Hello!</h1>
+    <body ng-app="firstApp">
+        <div ng-controller="controller">
+            {{value|myfilter|uppercase}}
+        
+            <br><br>
+        <button ng-click="change();">click</button>
+    </div>
     </body>
 
 </html>

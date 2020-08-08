@@ -1,0 +1,23 @@
+<html>
+    <head>
+    <title>assignment1</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    </head>
+
+    <body ng-app="assignment1">
+
+        <div ng-controller="controller">
+            <h3>Enter items to eat</h3>
+
+            <input type="text" ng-model="name">
+            
+            <br><br>
+
+            <button ng-click="check()">check if too much</button>
+            <br><br>
+            {{output}}
+        </div>
+    </body>
+
+</html>
