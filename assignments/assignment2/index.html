@@ -1,0 +1,34 @@
+<html ng-app='shoppingApp'>
+    <head>
+        <title>Assignment 2</title>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">"check off" shopping List application</h1>
+        <hr>
+        <br>
+        <div ng-controller ='toBuy' style="float:left; height:200px; margin-right:100px">
+            <h2 style="margin:0px">To Buy List!</h2>
+            <ol>
+                <li ng-repeat = 'item in toBuyList'>
+                    Buy {{item.itemQuantity}} {{item.item}}
+                    <button ng-click='buyItem(item.item, item.itemQuantity, $index);' style="margin-left:10px;">Bought</button>
+                    <br><br>
+                </li>
+            </ol>
+            <div ng-if="allBought();"  style='color:red;'>Everything is bought!</div>
+        </div> 
+
+        <div ng-controller = 'bought'>
+            <h2 style="margin:0px">To Buy List!</h2>
+            <ol>
+                <li ng-repeat = 'item in boughtList'>
+                    Bought {{item.itemQuantity}} {{item.item}} 
+                <br><br>
+                </li>
+            </ol>
+            <div ng-if="nothingBought();"  style='color:red;'>Nothing bought yet!</div>
+        </div>
+    </body>
+</html>
